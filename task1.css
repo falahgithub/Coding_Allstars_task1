@@ -1,0 +1,73 @@
+/* Define CSS variables for colors */
+:root {
+  --primary-color:#3c4650 ;
+    --secondary-color: grey;
+}
+
+.header {
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  padding: 20px;
+  color: white;
+  mix-blend-mode: multiply; /* Apply blend mode */
+}
+
+/* Containing different Header Elements */
+.container {
+  display: flex;
+  gap: 10px;  
+  justify-content: center;
+}
+
+/* Main Body containing Button */
+.main-content {
+  display: flex;
+  padding: 20px;
+  justify-content:center;
+  background-color: white;
+}
+
+
+button {
+  width: 25rem;
+  height: 10rem;
+  background-color:#5B9A8B;
+  color: white;
+  cursor: pointer;  
+  transition: background-color 1s ease;
+  
+}
+
+button:hover {
+  background-color: #9F91CC;
+  transform: scale(1.15);
+}
+
+
+
+
+.footer {
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+  padding: 20px;
+  color: white;
+  text-align: center;
+  mix-blend-mode: overlay; /* Apply blend mode */
+}
+
+
+/* Small screens */
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+    gap: 5px;
+    align-items: left;
+  }
+}
+
+/* medium screens */
+@media (min-width: 577px) and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
